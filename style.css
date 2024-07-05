@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    /* 1rem = 16
+    1rem = 10px */
+    font-size: 62.5%;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+.hero_section{
+    height: 100vh;
+    width: 100%;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    /* Mobile nav  */
+    position: relative;
+}
+
+.logo h2{
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.logo h2 span{
+    color: #f4637f;
+}
+
+.nav_links ul{
+    display: flex;
+    list-style: none;
+    gap: 3.2rem;
+}
+
+.nav_links ul li a{
+    text-decoration: none;
+    color: #2a2a2a;
+    font-size: 1.8rem;
+    font-weight: 500;
+    transition: all .3s ease;
+}
+
+.nav_links ul li a:hover{
+    color: #f4637f;
+}
+
+.mobile_nav{
+  display: none;
+}
+
+.mobile_icon{
+    color: #2a2a2a;
+    font-size: 2.4rem;
+    cursor: pointer;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9.6rem;
+    margin-top: 7rem;
+}
+
+.content img{
+    width: 45rem;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.content img:hover{
+    transform: scale(1.2);
+}
+
+.content_text{
+    text-align: center;
+    color: #2a2a2a;
+}
+
+.content_text p{
+    font-size: 2rem;
+}
+
+.content_text h1{
+    font-size: 5rem;
+}
+
+.content_text h4{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.btn button{
+    padding: 8px 2rem;
+    background: transparent;
+    outline: none;
+    border: 1px solid #2a2a2a;
+    border-radius: 3rem;
+    margin-right: 1rem;
+    margin-bottom: 3rem;
+    cursor: pointer;
+}
+
+.btn .btn_2{
+    background-color: #2a2a2a;
+    color: white;
+    border: none;
+}
+
+.btn .btn_2:hover{
+    background-color: #f4637f;
+}
+
+.socials a{
+    font-size: 4rem;
+    margin: 0 1.5rem;
+    transition: all .2s ease;
+    text-decoration: none;
+    color: #2a2a2a;
+}
+
+.socials i:hover{
+    color: #f4637f;
+}
+
+@media (max-width:768px) {
+
+        .nav_links ul {
+            flex-direction: column;
+            display: none;
+        }
+    
+        #menu-toggle-checkbox:checked + .nav_links ul {
+            display: flex;
+        }
+    
+        .mobile_nav {
+            display: block;
+        }
+    
+        /* Toggle icons */
+        #menu-toggle-checkbox:not(:checked) ~ .mobile_nav .ri-close-line {
+            display: none;
+        }
+    
+        #menu-toggle-checkbox:checked ~ .mobile_nav .ri-menu-line {
+            display: none;
+        }
+    
+    .content{
+        flex-direction: column;
+    }
+
+    .content_text{
+        margin: 0;
+        margin-top: 2rem;
+    }
+}
